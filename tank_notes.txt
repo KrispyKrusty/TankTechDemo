@@ -1,0 +1,11 @@
+tank game
+
+use input boxes and btn for the map generation. 
+
+add note of recommended amt of tiles as well as a immediately calculated amt of tiles 
+
+add note of aspect ratio depending on device.
+
+have it display the current seed
+
+max tile count: 4k, max row count: 30, max column count: 50

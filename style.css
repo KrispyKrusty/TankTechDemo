@@ -1,0 +1,119 @@
+@media only screen and (orientation:portrait) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+  background-color: #b99797;
+  overflow: hidden;
+}
+html{
+  background-image: url("./R.jpg");
+  background-repeat: repeat;
+}
+body{
+  background-color: transparent;
+}
+
+#wrapper {
+  display: grid;
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  grid-template-rows: 90% 10%;
+  background-color: #4b1d1d;
+  border: .5vmin solid #000000;
+}
+#wrapper-top-row {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  width: 100%;
+  height: 100%;
+}
+
+#terminal {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background:#c09898;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+#terminal button {
+  width: calc(100% * (2/3));
+  height: calc(100% * (2/3));
+  font-weight: bold;
+  font-size: 100%;
+  transition-duration: 100ms;
+}
+#terminal button.inactive {
+  background-color: #d4c9ab;
+  border: #a59c85 inset 1vmin;
+  color: #38312b;
+}
+#terminal button.inactive:active {
+  color: #271d0f;
+  background-color: #e5dabc;
+  border: #a59c85 outset 1vmin
+}
+#terminal button.active {
+  color: #271d0f;
+  background-color: #e5dabc;
+  border: #a59c85 outset 1vmin
+}
+#terminal button.active:active {
+  background-color: #d4c9ab;
+  border: #a59c85 inset 1vmin;
+  color: #38312b;
+}
+
+#grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-color: #fff3bc;
+}
+
+#console {
+  background-color: #f5dcdc;
+  padding: 1vmin;
+}
+
+.tile {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border: .25vmin solid #a8a8a8;
+}
+.tile:hover {
+  z-index: 1;
+  border: .25vmin solid #000000;
+}
+.tile:active {
+  background-color: #00000030;
+}
+
+.player {
+  background-color: #ff7d7d;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 80%;
+  height: 80%;
+}
